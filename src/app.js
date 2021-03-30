@@ -2,6 +2,7 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 
+
 const app = express()
 
 // Define paths for Express config
@@ -20,16 +21,17 @@ app.use(express.static(publicDirPath))
 app.get('', (req,res) => {
     res.render('index', {
         title: 'Weather App',
-        name:  'JOnny sins'
+        name:  'Created By T.S'
     })
 })
 
 app.get('/about', (req,res) =>{
     res.render('about', {
         title: 'About the weather app',
-        name:  'JOnny sins'
+        name:  'Created By T.S'
     })
 })
+
 
 app.get('/about/*', (req,res) => {
     res.render('errorPage', {

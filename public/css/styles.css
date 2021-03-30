@@ -1,9 +1,19 @@
-body{
-    color: #333333;
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: auto;
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 header{
@@ -12,21 +22,88 @@ header{
 }
 
 header a {
-    color: cornflowerblue;
+    color: black;
     text-decoration: none;
-    margin-right: 20px ;
+    margin-right: 50px ;
+    border: 2px solid rgb(34, 16, 16);
+    padding: 1%;
+    font-size: 30px;
+    
 }
 
-
-footer{
-    color: #888888;
-    border-top: 1px solid #eeeeee ;
-    margin-top: 16px;
-    padding: 16px 0 ;
+#mainBox{
+text-align: center;
+margin-top: 10%;
+}
+#links{
+    text-align: center;
+    padding-top: 4ch;
 }
 
 h1{
     font-size: 70px;
     text-align: center;
     margin-bottom: 16px;
+    text-decoration: underline;
 }
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px
+}
+
+button{
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+}
+
+footer{
+text-align: right;
+margin-top: 28%;
+}
+
+.text{
+    font-size: 3ch;
+    font-family:Arial, Helvetica, sans-serif ;
+    text-decoration: wavy;
+}
+
+
+#creator {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    background: linear-gradient(to bottom, #000, #000 60%, #fff 60%, #fff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-repeat: no-repeat;
+    transition: background 0.2s ease-out;
+    white-space: nowrap;
+  }
+  
+  span {
+    position: relative;
+  }
+  
+  span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background: #000;
+    bottom: 9px;
+    transition: all 0.2s ease-out;
+  }
+  
+  p:hover {
+    background-position: 0 11px;
+  }
+  
+  span:hover:before {
+    transform: translateY(10px)
+  }
